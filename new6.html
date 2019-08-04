@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" type="text/css" href="product.css">
+<link rel="stylesheet" type="text/css" href="headercss.css">
+<body>
+<header class="header">
+            <h1 class="logo"><a href="#">XYZ Stores</a></h1>
+         <ul class="main-nav login">
+             <li style="position: relative"><a onclick="openNav('open')">Cart -</a><span style="position:absolute; right:0;top: 9px;" id="itemsInCart">0</span></li>
+             <li><a id="loginhref" onclick="logout()"><label id="user_name">LOGIN/SIGN UP</label></a></li>
+         </ul>
+		 <ul class="main-nav category">
+             <li><a onclick="scrollcloth()">Clothes</a></li>
+             <li><a onclick="scrollshoe()">Shoes</a></li>
+         </ul>
+</header>
+<div class="content">
+<div class="flex-container clothes">
+<div class="card">
+  <img src="product2.jpg" alt="Denim Jeans" style="width:100%">
+  <h1>Denim Jeans</h1>
+  <p class="price">Rs 700</p>
+  <p class="description">Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+  <p><button id="btn-clothes-0" onclick="addToCart(0,'clothes');">Add to Cart</button></p>
+</div>
+<div class="card">
+  <img src="product2.jpg" alt="T-Shirt" style="width:100%">
+  <h1>T-Shirt</h1>
+  <p class="price">Rs 850</p>
+  <p class="description">Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+  <p><button id="btn-clothes-1" onclick="addToCart(1,'clothes')">Add to Cart</button></p>
+</div>
+<div class="card">
+  <img src="product2.jpg" alt="Formal Shirt" style="width:100%">
+  <h1>Formal Shirt</h1>
+  <p class="price">Rs 800</p>
+  <p class="description">Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+  <p><button id="btn-clothes-2" onclick="addToCart(2,'clothes')">Add to Cart</button></p>
+</div>
+<div class="card">
+  <img src="product2.jpg" alt="Track Pant" style="width:100%">
+  <h1>Track Pant</h1>
+  <p class="price">Rs 900</p>
+  <p class="description">Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+  <p><button id="btn-clothes-3" onclick="addToCart(3,'clothes')">Add to Cart</button></p>
+</div>
+<div class="card">
+  <img src="product2.jpg" alt="Formal Pants" style="width:100%">
+  <h1>Formal Pants</h1>
+  <p class="price">Rs 850</p>
+  <p class="description">Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+  <p><button id="btn-clothes-4" onclick="addToCart(4,'clothes')">Add to Cart</button></p>
+</div>
+<div class="card">
+  <img src="product2.jpg" alt="Denim Jacket" style="width:100%">
+  <h1>Denim Jacket</h1>
+  <p class="price">Rs 700</p>
+  <p class="description">Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+  <p><button id="btn-clothes-5" onclick="addToCart(5,'clothes')">Add to Cart</button></p>
+</div>
+</div>
+
+<div class="flex-container shoes">
+<div class="card">
+  <img src="product2.jpg" alt="Adidas" style="width:100%">
+  <h1>Adidas</h1>
+  <p class="price">Rs 800</p>
+  <p class="description">Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+  <p><button id="btn-shoes-0" onclick="addToCart(0,'shoes')">Add to Cart</button></p>
+</div>
+<div class="card">
+  <img src="product2.jpg" alt="Reebok" style="width:100%">
+  <h1>Reebok</h1>
+  <p class="price">Rs 850</p>
+  <p class="description">Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+  <p><button id="btn-shoes-1" onclick="addToCart(1,'shoes')">Add to Cart</button></p>
+</div>
+<div class="card">
+  <img src="product2.jpg" alt="Nike" style="width:100%">
+  <h1>Nike</h1>
+  <p class="price">Rs 900</p>
+  <p class="description">Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+  <p><button id="btn-shoes-2" onclick="addToCart(2,'shoes')">Add to Cart</button></p>
+</div>
+<div class="card">
+  <img src="product2.jpg" alt="Sparx" style="width:100%">		
+  <h1>Sparx</h1>
+  <p class="price">Rs 750</p>
+  <p class="description">Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+  <p><button id="btn-shoes-3" onclick="addToCart(3,'shoes')">Add to Cart</button></p>
+</div>
+<div class="card">
+  <img src="product2.jpg" alt="Khadims" style="width:100%">
+  <h1>Khadims</h1>
+  <p class="price">Rs 800</p>
+  <p class="description">Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+  <p><button id="btn-shoes-4" onclick="addToCart(4,'shoes')">Add to Cart</button></p>
+</div>
+<div class="card">
+  <img src="product2.jpg" alt="Bata" style="width:100%">
+  <h1>Bata</h1>
+  <p class="price">Rs 850</p>
+  <p class="description">Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+  <p><button id="btn-shoes-5" onclick="addToCart(5,'shoes')">Add to Cart</button></p>
+</div>
+</div>
+</div>
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div id="mySidenavProduct"></div>
+  <div class="checkout"><h4><span> Amount: Rs </span><span id="checkoutAmount">0</span></h4><div><button id="checkout"> Checkout </button></div>
+</div>
+</div>
+<script src="product.js"></script>
+</body>
+
+</html>

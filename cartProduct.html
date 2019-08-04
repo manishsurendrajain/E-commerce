@@ -1,0 +1,21 @@
+<div class="cart-item">
+  <div style="text-align: center;">${cart[x].name}</div>
+  <div class="product" style="">
+  <img src="product2.jpg" alt="xyz" style="width:100%">
+  </div>
+  <div style="
+    padding: 5px;
+">
+  <div>
+  <label for="Quantity">Quantity</label>
+  <input id='${x}' type="number" min="1" value='${cart[x].quantity}' onchange="changeQuantity(id)" name="Quantity">
+  </div>
+  <div>
+  <label for="Price">Price of 1</label>
+  <input type="number" value='${cart[x].price}' name="Price" disabled>
+  </div>
+  
+  <div><button id="btn-${x}" onclick="removeFromCart(${x},${cart[x].index},'${cart[x].category}')"> Remove From Cart</button></div>
+</div>
+<a href="javascript:void(0)" class="closebtn" onclick="removeFromCart(${x},${cart[x].index},'${cart[x].category}')">&times;</a>
+</div>
