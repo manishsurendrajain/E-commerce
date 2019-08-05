@@ -108,9 +108,42 @@
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <div id="mySidenavProduct"></div>
-  <div class="checkout"><h4><span> Amount: Rs </span><span id="checkoutAmount">0</span></h4><div><button id="checkout"> Checkout </button></div>
+  <div class="checkout"><h4><span> Amount: Rs </span><span id="checkoutAmount">0</span></h4><div><a href="#popup1"><button id="checkout" onclick="checkout();"> Checkout </button></a></div>
 </div>
 </div>
+<div class="checkout-modal">
+<div id="popup1" class="overlay">
+                  <div class="popup">
+				  <h2><caption>Order Summary</caption></h2>
+                        <a class="close" href="#">&times;</a>
+                        <div class="content">
+                             <table>
+      
+      <thead>
+        <tr>
+          <th scope="col">Product Name</th>
+          <th scope="col">Price</th>
+          <th scope="col">Quantity</th>
+          <th scope="col">Amount</th>
+        </tr>
+      </thead>
+      <tbody id="checkoutProducts">
+	  
+      </tbody>
+	  
+    </table>
+	<div>Amount : Rs <span id="totalamount"></span></div>
+	<br><br>
+	<div style="display: flex;">
+	<textarea rows="10" cols="100" style= "margin: auto;" placeholder="Type Address"></textarea>
+                        </div>
+						<br><br>
+	<div style="display: flex; justify-content: center; padding-bottom:20px;"><button onclick="confirmOrder();"> Confirm Order</button></div>
+						</div>
+                  </div>
+            </div>
+			</div>
+            </div>
 <script src="product.js"></script>
 </body>
 

@@ -17,6 +17,12 @@ var shoes = [];
 	xmlhttp.open("GET", "https://api.myjson.com/bins/19mszx", true);
 	xmlhttp.send();
 })();
+class finalOrder {
+    constructor(id, cartItems) {
+        this.id = id;
+        this.cartItems = cartItems;
+    }
+}
 // uncomment below both arrays if json is not fetched
 /*clothes = [
 {index: 0,name: "Denim Jeans" ,price: 700 ,category: "clothes",quantity: 1},
@@ -139,4 +145,35 @@ function removeFromCart(id,id1,category){
  function scrollshoe(){
     var elmnt = document.getElementsByClassName("shoes");
     elmnt[0].scrollIntoView();
+ }
+ 
+ function checkout(){
+	 var table='';
+	 var totalAmount = 0;
+	 for(let x in cart){
+		 var amount = cart[x].price * cart[x].quantity;
+		 totalAmount+=amount;
+	 var row = `<tr>
+          <td data-label="Product Name">${cart[x].name}</td>
+          <td data-label="Price">${cart[x].price}</td>
+          <td data-label="Quantity">${cart[x].quantity}</td>
+          <td data-label="Amount">${amount}</td>
+        </tr>`;
+	 table += row;
+	 }
+	 document.getElementById("checkoutProducts").innerHTML = table;
+	 document.getElementById("totalamount").innerHTML = totalAmount;
+ }
+ function confirmOrder(){
+
+		var orders = JSON.parse(localStorage.getItem('Orders') || "[]");
+		let newOrder = new finalOrder(orders.length, cart);
+		orders.push(newOrder);
+		localStorage.setItem('Orders', JSON.stringify(orders));
+		//orders[orders.length].id = orders.length;
+		//orders[orders.length].cartItems = [];
+		//orders[orders.length].cartItems =  cart;
+		window.location="#";
+	 location.reload();
+	 
  }

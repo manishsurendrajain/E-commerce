@@ -1,153 +1,6 @@
-
-body {
-  margin: 0;
-}
-
-/* Style the header */
-.header {
-  background-color: #f1f1f1;
-  display: table;
-  width: 100%;
-  position: fixed;
-  top: 0;
-}
-.header div{
-float: left;
-}
-.header .login{
-float: right;
-padding-right: 25px;
-}
-.topnav {
-  overflow: hidden;
-  background-color: #f1f1f1;
-  padding-left: 20px;
-}
-
-/* Style the topnav links */
-.topnav a {
-  float: left;
-  display: block;
-  color: #333;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-/* Change color on hover */
-.topnav a:hover {
-  background-color: #333;
-  color: white;
-}
-.content {
-}
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 300px;
-  margin: auto;
-  text-align: center;
-  font-family: arial;
-  position: relative;
-}
-.card img{
-  width: 100%;
-  height: 250px;
-}
-.card .description{
-	font-size: 1vmax;
-	padding-bottom: 50px;
-}
-.price {
-  color: grey;
-  font-size: 22px;
-}
-
-.card button {
-  border: none;
-  outline: 0;
-  padding: 12px;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-  font-size: 18px;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-}
-
-.card button:hover {
-  opacity: 0.7;
-}
-.flex-container {
-    display: flex;
-    flex-wrap: wrap;
-	margin: auto;
-    width: 90%;
-	padding-top:100px;
-}
-.flex-container div{
-   margin:10px 20px;
-}
-
-.sidenav {
-  height: 90%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 80px;
-  right: 0;
-  background-color: #ffffcc;
-  overflow-x: hidden;
-  transition: 0.5s;
-  line-height: 1.5em;
-}
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-.sidenav .cart-item .closebtn{
-	position: absolute;
-  top: 5px;
-  right: 25px;
-  font-size: 25px;
-  margin-left: 50px;
-	
-}
-.product {
-   width:50%; 
-   float:left;
-   padding: 5px;
-}
-.product img {
-width: 100%;
-}
-.sidenav label{
-display: block;
-}
-.sidenav button {
-margin: 10px 0px 50px 5px;
-}
-
-#mySidenavProduct{
-margin: 30px 10px 0px 10px;
-}
-.cart-item {
-	border: 1px solid darkgray;
-    margin: 10px;
-    border-radius: 5px;
-    box-shadow: 2px 2px 0 darkgreen;
-    position: relative;	
-}
-.checkout {
-text-align: center;
-padding-top: 50px;
-}
-table {
+<style>
+      
+      table {
         border: 1px solid #ccc;
         border-collapse: collapse;
         margin: 0;
@@ -286,11 +139,11 @@ table {
 .checkout-modal .overlay:target {
   visibility: visible;
   opacity: 1;
-  z-index:2;
 }
 
 .checkout-modal .popup {
   margin: 70px auto;
+  padding: 20px;
   background: #fff;
   border-radius: 5px;
   width: 50%;
@@ -307,7 +160,7 @@ table {
 }
 .checkout-modal .popup .close {
   position: absolute;
-  top: 0;
+  top: 20px;
   right: 30px;
   transition: all 200ms;
   font-size: 30px;
@@ -319,7 +172,7 @@ table {
   color: #06D85F;
 }
 .checkout-modal .popup .content {
-  max-height: 550px;
+  max-height: 50%;
   overflow: auto;
 }
 
@@ -332,5 +185,67 @@ table {
     width: 70%;
   }
 }
+         </style>
 
-}
+
+
+
+
+
+  <div class="checkout-modal">
+           <div class="box">
+                  <a class="button" href="#popup1">Let me Pop up</a>
+            </div>
+            
+            <div id="popup1" class="overlay">
+                  <div class="popup">
+				  <h2><caption>Order Summary</caption></h2>
+                        <a class="close" href="#">&times;</a>
+                        <div class="content">
+                             <table>
+      
+      <thead>
+        <tr>
+          <th scope="col">Product Name</th>
+          <th scope="col">Price</th>
+          <th scope="col">Quantity</th>
+          <th scope="col">Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-label="Product Name">Visa - 3412</td>
+          <td data-label="Price">04/01/2016</td>
+          <td data-label="Quantity">$1,190</td>
+          <td data-label="Amount">03/01/2016 - 03/31/2016</td>
+        </tr>
+        <tr>
+          <td scope="row" data-label="Product Name">Visa - 6076</td>
+          <td data-label="Price">03/01/2016</td>
+          <td data-label="Quantity">$2,443</td>
+          <td data-label="Amount">02/01/2016 - 02/29/2016</td>
+        </tr>
+        <tr>
+          <td scope="row" data-label="Product Name">Corporate AMEX</td>
+          <td data-label="Price">03/01/2016</td>
+          <td data-label="Quantity">$1,181</td>
+          <td data-label="Amount">02/01/2016 - 02/29/2016</td>
+        </tr>
+        <tr>
+          <td scope="row" data-label="Product Name">Visa - 3412</td>
+          <td data-label="Price">02/01/2016</td>
+          <td data-label="Quantity">$842</td>
+          <td data-label="Amount">01/01/2016 - 01/31/2016</td>
+        </tr>
+      </tbody>
+    </table>
+	<br><br>
+	<div style="display: flex;">
+	<textarea rows="10" cols="100" style= "margin: auto;" placeholder="Type Address"></textarea>
+                        </div>
+						<br><br>
+	<div style="display: flex; justify-content: center;"><button onclick=""> Confirm Order</button></div>
+						</div>
+                  </div>
+            </div>
+            </div>
